@@ -1,0 +1,32 @@
+<article
+  class="form-wrapper"
+  [ngClass]="toggleStatus ? 'update-form-wrapper--active' : ''"
+>
+  <section class="update-form form">
+    <header class="form-header">
+      <section class="form-header__text">
+        <h1>Update “{{ menu?.content }}”</h1>
+      </section>
+      <section class="form-header__closeBtn" (click)="closeUpdateFormHandle()">
+        <fa-icon [icon]="faClose"></fa-icon>
+      </section>
+    </header>
+    <section class="update-form-content">
+      <section class="form-content__element form-content__title">
+        Menu content:
+      </section>
+      <section class="input-wrapper">
+        <input
+          class="form-content__element form-content__input"
+          [(ngModel)]="menuContentInput"
+        />
+      </section>
+      <button
+        class="form-content__element update-form-content__submit"
+        (click)="updateMenuHanle()"
+      >
+        Update
+      </button>
+    </section>
+  </section>
+</article>

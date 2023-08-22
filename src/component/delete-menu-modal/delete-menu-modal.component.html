@@ -1,0 +1,27 @@
+<article
+  class="form-wrapper"
+  [ngClass]="toggleStatus ? 'delete-modal-wrapper--active' : ''"
+>
+  <section class="delete-modal form">
+    <header class="form-header">
+      <section class="form-header__text">
+        <h1>Warning!</h1>
+      </section>
+      <section
+        class="form-header__closeBtn"
+        (click)="closeDeleteMenuModalHandle()"
+      >
+        <fa-icon [icon]="faClose"></fa-icon>
+      </section>
+    </header>
+    <section class="delete-modal-content">
+      <h1>Are you sure you want to delete “{{ menu?.content }}”</h1>
+      <button
+        class="form-content__element delete-modal-content__submit"
+        (click)="deleteMenuHanle()"
+      >
+        Delete
+      </button>
+    </section>
+  </section>
+</article>

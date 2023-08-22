@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+h1 {
+  margin: 0px;
+}
+
+.form-wrapper {
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.293);
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+.form {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 500px;
+}
+.form-content__element {
+  margin: 5px 0px;
+}
+.form-content__input {
+  outline: none;
+  border: none;
+  width: 100%;
+}
+.form-content__title {
+  font-size: 12px;
+}
+.input-wrapper {
+  padding: 3px 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+.input-wrapper:focus-within {
+  border: 1px solid rgb(136, 125, 255);
+}
+.form-header {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-header__closeBtn {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.496);
+  transition: 0.3s ease;
+}
+.form-header__closeBtn:hover {
+  color: rgba(0, 0, 0, 1);
+}

@@ -1,0 +1,52 @@
+<section class="content-wrapper">
+  <span
+    (click)="toggleChildrenHandle()"
+    class="content-wrapper__dropdownIcon"
+    *ngIf="menu?.childrens?.length"
+  >
+    <fa-icon [icon]="toggleChildren ? faAngleUp : faAngleDown"></fa-icon
+  ></span>
+  <p class="content-wrapper__text" (click)="toggleChildrenHandle()">
+    {{ menu?.content }}
+  </p>
+  <section class="action">
+    <section
+      title="Edit content"
+      class="action__item action__item--green"
+      (click)="updateMenuHandle()"
+    >
+      <fa-icon [icon]="faEdit"></fa-icon>
+    </section>
+    <section
+      title="Delete"
+      class="action__item action__item--red"
+      (click)="deleteMenuHandle()"
+    >
+      <fa-icon [icon]="faTrashAlt"></fa-icon>
+    </section>
+    <section
+      title="Add child"
+      class="action__item"
+      (click)="insertMenuHandle('to')"
+    >
+      <fa-icon [icon]="faPlusSquare"></fa-icon>
+    </section>
+    <section
+      title="Add after"
+      class="action__item action__item--sky"
+      (click)="insertMenuHandle('after')"
+    >
+      <fa-icon [icon]="faArrowTurnDown"></fa-icon>
+    </section>
+  </section>
+</section>
+<section
+  [ngClass]="
+    toggleChildren ? 'children-wrapper--activate' : 'children-wrapper--disable'
+  "
+  *ngIf="menu?.childrens"
+>
+  <ul *ngFor="let children of menu?.childrens">
+    <app-menu-item [menu]="children"></app-menu-item>
+  </ul>
+</section>

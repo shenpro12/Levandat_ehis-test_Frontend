@@ -1,0 +1,35 @@
+<article
+  class="form-wrapper"
+  [ngClass]="toggleStatus ? 'insert-form-wrapper--active' : ''"
+>
+  <section class="inser-form form">
+    <header class="form-header">
+      <section class="form-header__text">
+        <h1 *ngIf="inserType == 'to' || inserType == 'after'">
+          Insert {{ inserType }} “{{ menu?.content }}”
+        </h1>
+        <h1 *ngIf="inserType == 'none'">Insert new menu</h1>
+      </section>
+      <section class="form-header__closeBtn" (click)="closeInserFormHandle()">
+        <fa-icon [icon]="faClose"></fa-icon>
+      </section>
+    </header>
+    <section class="insert-form-content">
+      <section class="form-content__element form-content__title">
+        Menu content:
+      </section>
+      <section class="input-wrapper">
+        <input
+          class="form-content__element form-content__input"
+          [(ngModel)]="menuContentInput"
+        />
+      </section>
+      <button
+        class="form-content__element insert-form-content__submit"
+        (click)="createMenuHanle()"
+      >
+        Create
+      </button>
+    </section>
+  </section>
+</article>

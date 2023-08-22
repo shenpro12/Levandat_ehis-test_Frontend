@@ -1,0 +1,16 @@
+<section *ngIf="menuList.length">
+  <ul *ngFor="let menu of menuList">
+    <app-menu-item [menu]="menu"></app-menu-item>
+  </ul>
+</section>
+<section
+  *ngIf="!menuList.length"
+  title="Add new"
+  class="action__item"
+  (click)="insertMenuHandle('none')"
+>
+  <fa-icon [icon]="faPlusSquare"></fa-icon>
+</section>
+<app-inser-after-form></app-inser-after-form>
+<app-update-form></app-update-form>
+<app-delete-menu-modal></app-delete-menu-modal>
