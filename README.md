@@ -6,4 +6,4 @@ Tính năng:
              - Thêm menu mới làm con của một menu bất kỳ
 + Sửa nội dung hiển thị menu
 
-![image](https://github.com/shenpro12/Levandat_ehris-test/assets/104962122/e48ab625-2523-4494-a724-23300a56542b)
+![image](https://github.com/shenpro12/Levandat_ehis-test_Frontend/assets/104962122/76b4fc20-3a2d-417b-89f8-d99c9d599dfe)
